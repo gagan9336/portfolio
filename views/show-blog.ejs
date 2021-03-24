@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gagan Personal Blog</title>
+    <!-- Title Icon -->
+    <link rel="icon" href="https://img2.pngio.com/sardar-logo-png-transparent-png-kindpng-sardar-png-860_600.png"
+        type="image/x-icon">
+
+    <!-- BootStrap CSS -->
+    <!-- CSS only -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+    <!-- Semantic UI css -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet"
+        id="bootstrap-css">
+
+    <!-- custom -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <link rel="stylesheet" href="/path/to/styles/default.css">
+    
+
+</head>
+
+<body>
+
+    <div class="ui raised very padded text container segment" id="backColor">
+        <h2 class="ui header">
+            <%=blog.title%>
+        </h2>
+        <div class="extra">
+            <div class="ui label">
+                <%=blog.createdAtDate%>
+            </div>
+            <div class="ui label">
+                <%=blog.createdAtTime%>
+            </div>
+        </div>
+        <div class="ui segment" id="backColor2">
+            <div class="ui centered medium image" id="displayToBlock">
+                <img src="<%=blog.image%>">
+            </div>
+        </div>
+        <div class="description">
+            <%-blog.description%>
+        </div>
+        <hr style="margin-bottom: 1.75rem;">
+        <footer style="text-align: -webkit-center;">
+            <img style="display: inline;" class="ui avatar image" src="/images/pp.jpg">
+            <span>This Blog is written by <i>Gagandeep Singh</i>.</span>
+        </footer>
+        <hr style="margin-top: 1.75rem;">
+    </div>
+
+    <script src="/path/to/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- Semantic UI JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- BootStrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gagan Personal Blog-Writing</title>
+    <link rel="icon" href="https://img2.pngio.com/sardar-logo-png-transparent-png-kindpng-sardar-png-860_600.png"
+        type="image/x-icon">
+
+    <!-- BootStrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Make sure the path to CKEditor is correct. -->
+    <script src="//cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+
+    <!-- custom -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h3 style="text-align: center;">Write Your Ideal Blog!!!</h3>
+            <form action="/blog" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="title" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <textarea id="description" class="form-control" name="description" placeholder="Text"></textarea>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="image url">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+                <!-- <script>
+                    // Replace the <textarea id="editor1"> with a CKEditor 4
+                    // instance, using default configuration.
+                    CKEDITOR.replace('description');
+                </script> -->
+            </form>
+        </div>
+    </div>
+</body>
+</html>
