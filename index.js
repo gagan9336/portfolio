@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 var moment = require('moment');
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false});
+mongoose.connect('mongodb://localhost:27017/blog', { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false});
 
 app.set("view engine", "ejs");
 app.use(bodyParser.json({ limit: '10mb', extended: true }))
