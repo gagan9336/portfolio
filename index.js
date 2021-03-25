@@ -67,7 +67,7 @@ app.post("/blog", (req, res) => {
 });
 
 // Blog Writing
-app.get("/blog/write", (req, res) => {
+app.get("/blog/write-945933", (req, res) => {
     res.render("writing");
 })
 
@@ -83,7 +83,7 @@ app.get('/blog/:slug', (req, res) => {
 });
 
 //Update Blog
-app.get("/blog/:slug/update", (req, res) => {
+app.get("/blog/:slug/update-945933", (req, res) => {
     Blog.findOne({ slug: req.params.slug }, (err, blogging) => {
         if (err) {
             console.log(err);
