@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -9,7 +10,7 @@ var mongoose = require('mongoose');
 var moment = require('moment');
 
 // MongoDB Connection
-const db = "mongodb+srv://gagan:gagandeep@cluster0.9oluq.mongodb.net/Portfolio-Blog?retryWrites=true&w=majority"
+const db = process.env.MONGODB_URL;
 mongoose.connect(db, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false});
 
 app.set("view engine", "ejs");
