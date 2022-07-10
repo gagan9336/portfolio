@@ -1,0 +1,21 @@
+body
+{
+	background-image:linear-gradient(to right, #567572ff, #964f4cff, #696667ff);
+	color: rgb(0, 0, 0);
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+#backColor {
+	background-color :#E9ECEF
+}
+
+#backColor2 {
+	background-color :#E9ECEF
+}
+
+#displayToBlock {
+	display: block;
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap CSS -->
+    <!-- CSS only -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+    <!-- Semantic UI css -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet"
+        id="bootstrap-css">
+
+    <!-- custom -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <title>Gagan Personal Blog</title>
+    <link rel="icon" href="https://img2.pngio.com/sardar-logo-png-transparent-png-kindpng-sardar-png-860_600.png"
+        type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="row">
+        <div class="column padding-reset">
+            <div class="ui message" style="background-color: rgb(11, 12, 14);">
+                <h1 class="ui header" style="color: white; text-align: center;">Welcome To My Blog!!!</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feed -->
+    <% blog.forEach((blog)=>{%>
+        <div class="ui divided items container piled segment" style="background-color :#d4e0ec;">
+            <div class="item">
+                <div class="ui medium  image">
+                    <img src="<%=blog.image%>">
+                </div>
+                <div class="content">
+                    <a class="header">
+                       <b><u>
+                        <%=blog.title%>
+                    </u></b>
+                    </a>
+                    <div class="description">
+                        <%-blog.description.substring(0, 300)%>
+                    </div>
+                    <div class="extra">
+                        <a href="/blog/<%=blog.slug%>" class="ui right floated primary button">
+                            Read More...
+                            <i class="right chevron icon"></i>
+                        </a>
+                        <div class="ui label">
+                            <%=blog.createdAtDate%>
+                        </div>
+                        <div class="ui label">
+                            <%=blog.createdAtTime%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }); %>
+            <br>
+
+            <!-- Semantic UI JS -->
+            <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+            <!-- BootStrap JS -->
+            <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                    crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                    crossorigin="anonymous"></script> -->
+</body>
+</html>
